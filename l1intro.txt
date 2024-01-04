@@ -1,0 +1,56 @@
+=>32bit vs 64bit 
+
+
+Free 
+Not user-friendly 
+Very reliable.
+best for multi-tasking 
+very secure 
+open to public 
+
+=>Linux Kernel 
+
+=>Linux Distribution 
+https://distrowatch.com/
+https://distrowatch.com/ > (Menu Bar) > DistroWatch.com > Page Hit Ranking 
+
+Ubuntu        Free 
+CentOS        Free
+Redhat        Paid ( Not Open Source )
+Fedora        Free
+SuSe          Free and Paid
+Debian        Free 
+Linux Mint    Free
+Arch Linux    Free 
+
+=>Open Termial ( Linux is Case sensitive Operation System)
+ctl+alt+t
+
+=>Linux Color Coading 
+Blue = Directory (such as url,etc)
+Green = Executable or recognized data file 
+Skyblue = Symbolic Link file 
+Pink = Graphic image file 
+Red = Archive file (zip,tar,tar.gz etc...)
+
+
+=>Common Directories 
+/
+/bin 
+/etc 
+/home 
+/opt 
+/tmp
+/usr 
+/var 
+
+=>Basic Line Commands 
+ls    - Lists directory contents 
+cd    - Changes the current directory 
+pwd   - Displays the present working directory 
+cat   - Concatenates and display file 
+echo  - Display arguments to the screen 
+exit  - Exits the sheel or your current session 
+clear - Clear the screen 
+
+3BC 
