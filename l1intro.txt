@@ -35,14 +35,14 @@ Red = Archive file (zip,tar,tar.gz etc...)
 
 
 =>Common Directories 
-/
-/bin 
-/etc 
-/home 
-/opt 
-/tmp
-/usr 
-/var 
+/    "Root" the top of the file system
+/bin  Binary or executable programs
+/etc  System configuration files
+/home home directory. it is th edefault current directory
+/opt  Optional or third-party software
+/tmp  Temporty space, typically cleared on reboot
+/usr  User related programs
+/var  Variable data, most notably log files 
 
 =>Basic Line Commands 
 ls    - Lists directory contents 
@@ -53,4 +53,21 @@ echo  - Display arguments to the screen
 exit  - Exits the sheel or your current session 
 clear - Clear the screen 
 
-3BC 
+
+=>APT (Advanced Packing Tool)
+
+sudo apt-get update 
+sudo apt update 
+
+sudo apt-get upgrade 
+sudo apt upgrade 
+
+sudo apt-get upgrade -y
+sudo apt upgrade -y
+
+sudo apt-get update && sudo apt-get upgrade -y 
+
+
+
+Note::update for package 
+    ::upgrade for version

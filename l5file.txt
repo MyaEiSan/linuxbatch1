@@ -1,0 +1,16 @@
+=>file 
+
+=>Identifying Linux File Types 
+
+-     = Regular File 
+d     = Directory 
+c     = Character Device File 
+s     = Socket File 
+p     = named pipe 
+1     = Symbolic Link 
+
+- - - - - - - - - - - - - - - - - - - - - - - 
+
+=>Create File 
+
+touch l6

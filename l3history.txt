@@ -1,0 +1,39 @@
+=>History Commands 
+
+=>Clear Terminal 
+clear 
+ctl+m+l   (clear)
+
+ctl+m    (New Line )
+ctl+l    (clear)
+
+=>Close Terminal 
+exit
+ctl+d
+
+=>Cursor to start char in Terminal
+ctl+a
+
+=>Cursor to end char in Terminal
+ctl+e
+
+=>Find used commands again 
+ctl+r 
+enter (if you want to use)
+ctl+g (if you want to cancel)
+
+=>Command Callback 
+
+Press up arrow key (callback)
+Press up down key  (callback)
+!!                 (callback last command and run again)
+history            ( see all command histories)
+history5           ( see last 5 commands)
+history -c         ( clear all history )
+
+=>wget 
+wget https://storage.googleapis.com/pod_public/1300/150537.jpg
+ls 
+
+
+=>continue.....
