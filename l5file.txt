@@ -14,3 +14,53 @@ p     = named pipe
 =>Create File 
 
 touch l5sample.txt 
+
+=>Create & Edit File (cat = concatenate)
+cat > l5example.txt 
+hello sir...
+what are you doing 
+ctl+d 
+
+=>Read File 
+cat l5example.txt 
+
+
+
+=>vim editor 
+sudo apt install vim 
+vim filename.format 
+
+
+vim l5example.txt (or) vi l5example.txt 
+:q 
+
+what are you doing 16 
+ctl+c 
+:qa!   (for exit editor = no save = quit all buffers without a warning)
+
+vim l5example.txt 
+i 
+what are you doing 16
+ctl+c 
+:wq  (for exit editor = saved = write & quit)
+
+=>nano editor (System Default App)
+nano filename.format 
+
+nano l5example.txt 
+whare are you doing 17 
+ctl+x 
+y (file save & exit)
+enter 
+
+=>gedit editor (System Default App - Text Editor)
+gedit filename.format 
+
+sudo apt install gedit 
+gedit filename.format 
+
+gedit l5example.txt 
+
+
+
+
