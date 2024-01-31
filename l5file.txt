@@ -13,4 +13,4 @@ p     = named pipe
 
 =>Create File 
 
-touch l6
+touch l5sample.txt 
