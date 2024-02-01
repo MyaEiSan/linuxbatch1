@@ -61,6 +61,29 @@ gedit filename.format
 
 gedit l5example.txt 
 
+=>Rename File 
+mv l5example.txt l5exampletext.txt 
 
+=>Remove File 
+rm -i l5exampletext.txt ( with information before you delete y/n )
+rm -v l5sample.txt (show message after delete)
+rm -rf l5sample.txt 
 
+rm myfolder8      (can't delete folder)
+rm -rf myfolder8  (can)
 
+=>Copy File
+touch l5sample.txt  
+cp -r l5sample.txt l5samplebackup.txt 
+cp -r l5samplebackup.txt yourfolder8
+cp -r l5sample.txt yourfolder8/
+cp -r l5sample.txt myfolder9/myfolder10/ 
+
+=>Move File 
+mv l5sample.txt  myfolder9/myfolder8
+mv yourfolder8/l5samplebackup.txt myfolder9/myfolder8/
+
+=>Move File & Rename File same time 
+mv yourfolder8/l5sample.txt myfolder9/myfolder10/l5samplebackup2.txt 
+
+31FE
