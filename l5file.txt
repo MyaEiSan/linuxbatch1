@@ -22,11 +22,25 @@ what are you doing
 ctl+d 
 
 =>Read File 
-cat l5example.txt 
+cat l5example.txt       (1 to all)
+(or)
+head l5example.txt      (1 to 10)
+head -5 l5example.txt   (1 to 5)
+head -15 l5example.txt  (1 to 15)
+(or)
+tail l5example.txt      (15 to 6)
+tail -5 l5example.txt   (15 to 11)
+tail -5 l5example.txt   (15 to 11)
+tail -15 l5example.txt   (15 to 1)
 
+=>Check file status 
+stat l5example.txt 
 
+=>Check file type 
+file l5example.txt
 
-=>vim editor 
+=>Update File 
+vim editor 
 sudo apt install vim 
 vim filename.format 
 
