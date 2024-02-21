@@ -18,4 +18,44 @@ Note:: du mean disk usage
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-7ZP
+=>tar 
+
+(
+    c = tar to create a new archive 
+    v = will update 
+    f = to archive 
+)
+
+tar cvf l1example.tar l1intro.txt
+tar fvc l5sample.tar l5example.txt l5file.txt l5sample.txt
+tar fcv allfiles.tar *
+
+Note::l1intro.txt ကို l1example.tar လုပ္္ဖို့သုံးတာ 
+
+
+=> Extract tar 
+cp -r l1example.tar myzip/
+cd myzip 
+ls 
+du -h l1example.tar 
+tar xvf l1example.tar 
+
+Note:: x mean extract 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+=>gzip 
+du -sh l1example.tar
+gzip -v l1example.tar 
+du -sh l1example.tar.gz 
+
+Note::to make gzip , firstly make it to be tar 
+Note:: -v mean verbose 
+
+=>gunzip (Extract Gzip)
+gunzip -v l1example.tar.gz 
+
+=>Extra tar 
+tar xvf l1example.tar 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
