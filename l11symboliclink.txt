@@ -1,0 +1,104 @@
+=>Symbolic Link 
+
+
+=>In Same Folder 
+ls -l 
+mkdir -p l11folder 
+ls -l 
+cd l11folder 
+echo "Hello sir" > file0.txt 
+ls 
+cat file0.txt 
+
+ln -s l11folder l11foldershortcut 
+ls -l 
+cd l11foldershortcut 
+ls -l 
+cd file0.txt  
+
+
+cd l11folder 
+ls 
+echo "Hello World" > file1.txt 
+ls 
+
+cd - 
+cd l11foldershortcut
+ls 
+cat file1.txt 
+ 
+echo "Hello Earch" > file2.txt 
+ls 
+
+
+cd - 
+cd l11folder 
+ls 
+cat file2.txt 
+- - - - - - - - -
+
+Remove Symboliclink folder
+cd - 
+rm -rf l11foldershortcut 
+ls -l 
+cd l11folder 
+ls 
+
+ - - - - - - - -
+
+ =Remove Original folder 
+ cd -
+ ln -s l11folder l11shortcut 
+ ls 
+
+ cd - 
+ rm -rf l11folder 
+ ls -l 
+
+ cd l11shortcut (can't open , cuz original folder deleted)
+
+ rm -rf l11shortcut 
+
+ ------------
+
+
+
+=>In Different Folder 
+mkdir -p l11folder 
+cd l11folder 
+echo "Hello Sir" > file0.txt 
+ls 
+cat file0.txt 
+
+
+cd 
+ls 
+cd Desktop 
+ln -s l11folder l11shortcut (not working)
+ln -s ~/Documents/ubuntulinuxbatch1/l11folder l11shortcut 
+cd l11shortcut 
+ls 
+cd - 
+rm -rf l11shortcut
+
+(or)
+
+ln -s l11folder ~/Desktop/l11shortcut (not work, cuz need definite path )
+cd 
+ls 
+cd Desktop 
+ls -l 
+cd l11shortcut (not working, cuz link was l11shortcut -> l11folder)
+
+ln -s ~/Documents/ubuntulinuxbatch1/l11folder ~/Desktop/l11shortcut
+
+cd 
+ls -l 
+cd l11shortcut 
+--------------
+
+
+
+
+
+
