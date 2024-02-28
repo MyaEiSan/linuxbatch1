@@ -1,0 +1,37 @@
+=>For Shutdown 
+sudo poweroff 
+
+=>For restart (reboot)
+sudo reboot 
+
+=>Check Currently User 
+who  //  ubuntu   tty2         2024-02-28 21:09 (tty2)
+whoami  // ubuntu 
+
+=>Check Host Name 
+hostname //ubuntu-Lenovo-ideapad-130-14IKB
+
+
+=>Check 32bit processor or 64bit processor 
+uname -a //Linux ubuntu-Lenovo-ideapad-130-14IKB 6.5.0-18-generic #18~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb  7 11:40:03 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
+uname -i or uname -m  // x86_64
+getconf LONG_BIT  //64 
+
+
+=>Login as Root User 
+apt-get update //13: Permission denied
+
+sudo -s 
+Enter administrator user password 
+apt-get update 
+exit 
+
+(or) 
+
+sudo su 
+apt-get update 
+whoami   //root 
+exit 
+
+
+28FP 

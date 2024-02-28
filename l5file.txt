@@ -127,3 +127,25 @@ Note:: l mean list and h mean human readable format
 
 
 21FF
+
+
+=>Listing File By Type 
+
+ls -l 
+ls -F 
+ks -lF
+
+Symbol      Meaning
+/      =    Directory 
+@      =    Link 
+*      =    Executable 
+
+
+=>man     ( Such as Browser on Documentation)
+ctl+alt+t 
+man ls 
+man mkdir 
+
+q ( q = quit)
+
+Note::man describe 
