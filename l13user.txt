@@ -187,3 +187,28 @@ compgen -u
 sudo adduser user2   (with message / with password / with info)
 compgen -u 
 
+sudo useradd user3 -m 
+compgen -u 
+sudo passwd user3 
+new password = 123456789 
+retype new password = 123456789 
+su user3 
+password = 123456789 
+whoami 
+exit 
+whoami 
+
+=>Lock or Unlock user password 
+sudo passwd -l user3  (Lock)
+sudo passwd -u user3  (Unlock)
+
+=sudo passwd -l user3 
+su user3 
+password = 12345679  (su: Authentication failure)
+whoami 
+
+=sudo passwd -u user3  
+su user3 
+password = 123456789 
+whoami 
+exit 
