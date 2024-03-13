@@ -35,3 +35,149 @@ exit
 
 
 28FP 
+
+=>Setpassword or Changing root's password 
+sudo passwd root 
+new password :123456789
+return new password : 123456789
+
+=>Login as Root User
+=Method 1
+sudo -s                //root@ubuntu-Lenovo-ideapad-130-14IKB:/home/ubuntu# 
+whoami 
+exit 
+
+=Method 2
+sudo su                //root@ubuntu-Lenovo-ideapad-130-14IKB:/home/ubuntu# 
+whoami 
+exit 
+
+=Method 3            ( su = switch user )
+su -                  //root@ubuntu-Lenovo-ideapad-130-14IKB:~# 
+password : 123456789
+whoami 
+exit 
+
+=Method 4
+su                   //root@ubuntu-Lenovo-ideapad-130-14IKB:/home/ubuntu# 
+whoami 
+password: 123456789
+exit 
+
+
+=>Changing Password of Current User 
+su 
+password : 123456789
+whoami 
+
+
+passwd 
+Currend password: 
+New password: 123456789abc 
+retry New password:123456789abc
+
+=>Create New User Account 
+=Method 1 
+sudo useradd user1        (just created account, without user1 folder)
+=Method 2 
+sudo useradd user2 -m    ( cd /, cd home, ls = you will see system created user2 folder in under home folder)
+sudo useradd users3 -m 
+
+=>Display all users 
+compgen -u               (only username)
+getent passwd  (or)  cat /etc/passwd     (all info)
+
+
+
+=>Display single users 
+getent passwd user1  (single user all info)
+id                   (current login group detail info)
+id user1              (single user group info)
+
+=>set new user in terminal 
+sudo passwd user1 
+new password : 123456789 
+return new password : 123456789
+
+sudo passwd user2
+new password : 123456789 
+return new password : 123456789
+
+sudo passwd users3
+new password : 123456789 
+return new password : 123456789
+
+
+
+=>Switch user in terminal 
+su user1 
+password : 123456789 
+whoami 
+exit 
+
+
+su user2 
+password : 123456789 
+whoami 
+exit 
+
+ls -l 
+su user1 
+password : 123456789 
+whoami 
+cd / 
+ls 
+cd home 
+ls -l 
+cd administrator       //error an't access
+cd user1          /error can't access 
+ls 
+exit 
+
+
+ls -l 
+su user1 
+password : 123456789 
+whoami 
+cd / 
+ls 
+cd home 
+ls -l 
+cd administrator       //error an't access
+cd user2           
+mkdir userfolder2 
+echo "Hello" > file0.txt 
+ls 
+exit 
+
+ls -l 
+su users3 
+password : 123456789 
+whoami 
+cd / 
+ls 
+cd home 
+ls -l 
+cd administrator       //error an't access
+cd user2            /error can't access 
+cd users3
+mkdir userfolder3
+echo "Hello" > file0.txt 
+ls 
+exit 
+
+
+=>Delete User 
+=Method 1 
+sudo deluser user2        (delete user without deleting user files and directories)
+=Method 2 
+sudo deluser --remove-home users3 (delete user  deleting user files and directories under home folder)
+
+
+compgen -u 
+cd / 
+ls 
+cd home 
+ls -l     (result = remain only ubuntu & user2 folders)
+
+6US
