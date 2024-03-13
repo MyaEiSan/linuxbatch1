@@ -180,4 +180,10 @@ ls
 cd home 
 ls -l     (result = remain only ubuntu & user2 folders)
 
-6US
+
+sudo useradd user1 (without message / without password / without info)
+compgen -u 
+
+sudo adduser user2   (with message / with password / with info)
+compgen -u 
+
