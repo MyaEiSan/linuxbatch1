@@ -212,3 +212,34 @@ su user3
 password = 123456789 
 whoami 
 exit 
+
+
+=>Rename User 
+compgen-u 
+sudo useradd user4 -m // create user sudo useradd user5 -m 
+sudo passwd user4   // create password sudo passwd user5 
+new password = 123456789 
+retry new password = 123456789 
+
+whoami 
+cd /
+ls 
+cd home 
+ls -l 
+cd 
+
+su user4 
+password = 123456789 
+whoami 
+exit 
+whoami 
+
+=>Method 1 ( user name changed / but home/user4 directory won't change )
+sudo usermod -l user40 user4 
+=>Method 1 ( user name changed / but home/user5 directory will change )
+sudo usermod -l user50 -d /home/user50 -m user5 
+
+cd / 
+ls 
+
+Note:: -l mean login 

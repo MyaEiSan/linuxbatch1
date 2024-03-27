@@ -59,7 +59,11 @@ getent group
 sudo gpasswd -d user2 group3 
 getent group 
 
+=>Rename Group 
+compgen -g 
+getent group group4 
+sudo gropmod -n group40 group4 
+compgen -g 
+
 
 ----------------------------------------------------------------------------
-
-13GP 
