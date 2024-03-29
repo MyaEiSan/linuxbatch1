@@ -129,7 +129,7 @@ cd /
 ls 
 cd home 
 ls -l 
-cd administrator       //error an't access
+cd administrator       //error can't access
 cd user1          /error can't access 
 ls 
 exit 
@@ -143,7 +143,7 @@ cd /
 ls 
 cd home 
 ls -l 
-cd administrator       //error an't access
+cd administrator       //error can't access
 cd user2           
 mkdir userfolder2 
 echo "Hello" > file0.txt 
@@ -158,7 +158,7 @@ cd /
 ls 
 cd home 
 ls -l 
-cd administrator       //error an't access
+cd administrator       //error can't access
 cd user2            /error can't access 
 cd users3
 mkdir userfolder3
