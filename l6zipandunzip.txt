@@ -30,7 +30,7 @@ tar cvf l1example.tar l1intro.txt
 tar fvc l5sample.tar l5example.txt l5file.txt l5sample.txt
 tar fcv allfiles.tar *
 
-Note::l1intro.txt ကို l1example.tar လုပ္္ဖို့သုံးတာ 
+Note::l1intro.txt ကို l1example.tar လုပ်ဖို့သုံးတာ  
 
 
 => Extract tar 
