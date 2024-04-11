@@ -10,13 +10,48 @@ whoami  // ubuntu
 
 =>Check Host Name 
 hostname //ubuntu-Lenovo-ideapad-130-14IKB
+cat /etc/hostname   //administrator
 
+=>Change Host Name 
+hostnamectl set-hostname KOTHA-PC 
+hostname //KOTHA-PC 
+sudo reboot
+
+- - - - - - - - - - - - - - - - - - - -  
+=>Server Uptime 
+uptime 
+
+top 
+ctl+c  (exit)
+
+w 
+
+sudo apt-get install glances 
+glances
+ctl+c  (exit)
+- - - - - - - - - - - - - - - - - - - -
 
 =>Check 32bit processor or 64bit processor 
 uname -a //Linux ubuntu-Lenovo-ideapad-130-14IKB 6.5.0-18-generic #18~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Wed Feb  7 11:40:03 UTC 2 x86_64 x86_64 x86_64 GNU/Linux
 uname -i or uname -m  // x86_64
 getconf LONG_BIT  //64 
 
+
+- - - - - - - - - - - - - - - - - - - -
+
+=>Check Ubuntu Version 
+hostnamectl 
+cat /etc/os-release 
+cat /etc/issue 
+
+- - - - - - - - - - - - - - - - - - - -
+
+=>Upgrade New OS Version 
+hostnamectl 
+do-release-upgrade -c    ( Check for a new Ubuntu release version before upgrade)
+sudo do-release-upgrade  ( upgrade)
+
+- - - - - - - - - - - - - - - - - - - -
 
 =>Login as Root User 
 apt-get update //13: Permission denied

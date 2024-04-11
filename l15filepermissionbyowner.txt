@@ -1,0 +1,136 @@
+=>File Permission
+
+compgen -u  
+sudo useradd user10 -m 
+compgen -u 
+sudo passwd user10 
+new password = 123456789 
+
+whoami // administrator 
+cd / 
+ls 
+cd home 
+ls -l 
+cd user10 // bash: cd: user10: Permission denied 
+exit 
+
+su - 
+password:123456789abc 
+whoami   //root 
+cd / 
+ls 
+cd home 
+ls -l 
+cd user10 // can access 
+pwd 
+exit 
+
+su user10 
+123456789 
+whoami // user10 
+cd /
+ls 
+cd home 
+ls -l 
+cd user10 // can access 
+pwd 
+cd /
+exit 
+
+=>remove permission
+
+su user10 
+123456789 
+whoami // user10 
+cd / 
+ls 
+cd home 
+ls -l 
+=remove group permission 
+chmod g-x user10 
+chmod g-w user10 
+chmod g-r user10 
+
+cd user10 // can access
+cd / 
+cd home 
+ls -l 
+
+whoami // user10 
+=remove other permission 
+chmod o-r user10 
+chmod o-w user10 
+chmod o-x user10 
+
+cd user10 // can access 
+pwd 
+cd /
+cd home 
+ls -l 
+
+whoami // user10 
+=remove user permission 
+chmod u-r user10 // can access
+chmod u-w user10  // can access
+chmod u-x user10  // can't cd to user10 
+
+
+
+cd user10 // can't access 
+pwd 
+cd /
+cd home 
+ls -l 
+
+Note:: တစ်ခါတည်း read write execute အကုန်လုပ်ဖြုတ်ချင်ရင် ဖြုတ်ချင်သလောက်ပူးရေးလို့ရတယ် ဥပမာ u-rwx , u-rw ကိုလိုသလိုရေးလို့ရတယ်။ 
+
+
+=>Add Permission 
+whoami // user10 
+=add other permission 
+chmod 0+r user10
+chmod o+wx user10 // give write and execute access 
+
+ls -l 
+
+
+=add group permission 
+chmod g+rwx user10 
+ls -l 
+
+=>add user permission 
+chmod u+r user10 
+chmod u+wx user10 
+ls -l 
+
+cd user10 
+pwd 
+cd /
+cd home 
+ls -l 
+
+
+=>Remove All Permission 
+whoami  //user10 
+chmod a-r user10 
+chmod a-w user10 
+chmod a-x user10 
+ls -l  
+
+
+=>Add All Permission 
+whoami  //user10  
+chmod a+r user10 
+chmod a+w user10 
+chmod a+x user10 
+ls -l  
+
+=>Remove/Add All Permission 
+whoami // user10 
+chmod a-rwx user10 
+ls -l 
+chmod a+rwx user10 
+ls -l 
+
+
+10UP
