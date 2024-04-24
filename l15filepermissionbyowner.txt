@@ -88,7 +88,7 @@ Note:: တစ်ခါတည်း read write execute အကုန်လုပ�
 =>Add Permission 
 whoami // user10 
 =add other permission 
-chmod 0+r user10
+chmod o+r user10
 chmod o+wx user10 // give write and execute access 
 
 ls -l 
