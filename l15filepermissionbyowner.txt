@@ -134,3 +134,70 @@ ls -l
 
 
 10UP
+ - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+ =>Files Permission for Group Members 
+
+ compgen -u 
+
+ su user10 
+ 123456789 
+ cd /
+ cd home 
+ ls -l 
+ chmod g+rwx user10 
+ ls -l 
+ exit 
+
+
+ su user2 
+ 123456789 
+ cd / 
+ cd home 
+ ls -l 
+ cd user10 // Permission denied 
+ exit 
+
+ compgen -g 
+
+ groups user10 (check owner)
+ getent group user10 
+ members user10 
+
+ sudo adduser user2 user10 
+
+ getent group user10 
+ members 10 
+
+ su user2 
+ 123456789
+ cd /
+ cd home 
+ ls -l 
+ cd user10 
+ ls 
+ mkdir folder3byuser2 
+ ls 
+ rm -rf folder2byadmin 
+ ls 
+ exit 
+
+ sudo gpasswd -d user2 user10 
+ members user10 
+
+ su user2 
+ 123456789 
+ cd /
+ cd home 
+ ls -l 
+ cd user10 // Permission Denied 
+ exit
+
+ mygroup ဆိုတဲ့ group ဖွဲ့ 
+ user10 
+ user2 
+
+
+  - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+
+24GP
