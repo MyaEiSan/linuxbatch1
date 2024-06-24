@@ -1,0 +1,170 @@
+=>Install Package & Remove Package 
+
+=>Package Management System 
+(i) apt         (Advanced Package Tool) // Debian-based systems
+(ii) snap       // developed by Canonical, the company behind Ubuntu // cross-Distributions support , always up-to-date, huge size/dis space/resource 
+
+
+
+=>Method 1 
+    Using the Ubuntu Software Center 
+
+=>Method 2 
+    =Finding Installed Software 
+
+        Ctl + Alt + T 
+        dpkg -l (or) dpkg --list (or)  dpkg-query -l 
+
+    =Listing all Installed Software Package on Linux 
+        sudo apt list --installed 
+    
+    = Install Application 
+        sudo apt install packagename 
+        sudo apt install packagename -y (or) sudo apt install -y packagename ( -y flag = Automatic Yes to Prompts )
+        sudo apt install -s packagename ( -s flag = Simulate Installation / testing installation package , can't use this package just testing )
+
+        sudo apt update ( must run before install new app )
+
+        sudo apt install git    git -v         (version control system)
+        sudo apt install curl   curl --version  (command -line tool for transferring data with url)      
+        sudo apt install wget                   download files from web        
+        sudo apt install vim 
+        sudo apt install vlc 
+        sudo apt install aptitude  aptitude -v  aptitude search '~i'     (user for list install)
+        sudo apt install net-tools   ifconfig route 
+        sudo apt install nodejs       node -v 
+        sudo apt install npm  -y      npm -v 
+        sudo apt install php          php -v 
+        sudo apt install tree 
+
+        =>Firewall ( UFW = Uncomplicated Firewall )
+
+           ufw app list 
+           ufw status       // check firewall status 
+           ufw status numbered 
+           ufw reload       // reload after making changes in firewall
+           sudo ufw enable  // open firewall , when open firewall, can have ssh problem , to solve this problem , you can recover console from site such as digital ocean  ( Note :: beaware before you enable firewall, that can be lock yourself )
+           ufw status 
+           sudo ufw disable  // close firewall 
+           ufw status 
+
+           sudo ufw enable 
+           sudo ufw deny from 180.235.116.74  ( Block an IP Address )
+           sudo ufw allow from 180.235.116.74 ( Allow an IP Address )
+
+           sudo ufw deny from 180.235.116.0/20 ( Block an IP Address 180.235.116.0 to 180.235.116.20 )
+
+           sudo ufw deny in on eth0 from 192.168.1.2   ( Block Incoming connection to a Network Interface )
+
+           
+           sudo ufw allow in on eth0 from 192.168.1.2   ( Allow Incoming connection to a Network Interface )
+
+           ufw status 
+           ufw status numbered 
+
+           sudo ufw delete allow from 180.235.116.74  (Delete UFW rule)
+           sudo ufw delete 3  ( 3 = number from ufw status numbered )
+
+           sudo ufw allow ssh 
+           sudo ufw allow http 
+           sudo ufw allow https 
+
+          
+
+        
+=>View details information about specific package 
+
+    apt show packagename eg: apt show vlc  
+
+    
+
+=> Remove Package 
+
+    (i)   => Remove Package 
+          sudo apt remove tree 
+
+    (ii)  => Remove a package and it's configuration files 
+          sudo apt purge tree 
+
+    (iii) => Clean Up Unused Dependencies 
+          sudo apt autoremove 
+
+          =option 
+          sudo apt-get clean 
+          sudo apt-get --fix-broken install 
+
+
+
+
+
+=>Method 3 
+    Facial DEB download file install (.deb files on Ubuntu and Debian-based Linux Distributions )
+
+    
+student test server password 
+ 
+ssh root@152.42.198.108
+password = hellostudent123ABC  
+
+sudo apt-get update 
+sudo apt-get upgrade 
+
+Server ထဲမှာ လူဘယ်နှစ်ယောက်ဝင်ထားလဲ သိချင်ရင် 
+who 
+ဆိုတဲ့ command ကို သုံးရတယ် 
+
+Server တစ်ခုတည်းမှာ ပြိုင်တူဝင်နေတဲ့ user အချင်းချင်း terminal ကနေပြီး စာပို့ချင်ရင် အောက်ပါ အတိုင်း ပို့လို့ရတယ်။ 
+
+=>Using write Command ( Individual Message )
+write username pts/number   eg. write root pts/1 
+
+=>Using echo Command ( Individual Message )
+echo "This is aung aung, how are you friend" > /dev/pts/1 
+
+
+=>Using wall Command ( Group Message  = write all send message to all logged-in users )
+Note::wall means write all 
+
+echo "Hay Guy, Everything OK ?" | sudo wall 
+
+
+=> Nodejs Latest Version 
+Go https://nodejs.org/en/download/package-manager
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash 
+
+Go = https://github.com/nvm-sh/nvm
+
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
+
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # This loads nvm
+
+
+source ~/.bashrc
+nvm -v   0.39.7 
+node -v   v20.13.1 
+npm -v  10.5.2
+
+
+
+=>Method 5 
+    Facial DEB download file install  ( .deb files on Ubuntu and Debian-based Linux Distributions )
+
+    = .deb 
+
+        cd ~/Downloads/
+        sudo dpkg -i installfile.deb 
+
+        cd ~/Downloads/
+        sudo apt install -f   // Fix Dependencies
+
+    = .run 
+        (i) cd ~/Downloads/
+        sudo dpkg -i installfile.run // Make the file executable 
+
+        (ii) cd ~/Downloads/
+        sudo installer_file.run  or su installer_file.run 
+
+
+
+
