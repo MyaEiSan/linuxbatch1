@@ -131,7 +131,7 @@ Test : enter this url to your browser http://yourserverip/phpmyadmin
     mydbserver2025
     exit or \q
 
-    mysql -u root -p -h yourserverip 
+    mysql -u root -p -h yourserverip com
     mysql -u root -p -h 139.59.230.166 ( check permission to remote from mysql editor, if can't access, it have no permission to remote )
 
      Note::should not give remote permission for mysql root user 

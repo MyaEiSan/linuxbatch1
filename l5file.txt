@@ -133,7 +133,7 @@ Note:: l mean list and h mean human readable format
 
 ls -l 
 ls -F 
-ks -lF
+ls -lF
 
 Symbol      Meaning
 /      =    Directory 

@@ -27,7 +27,7 @@ rm -rf myfolder5            Note: delete myfolder5 and subfolders 6 and 7
 rmdir myfolder2 
 rmdir myfolder3/
 rmdir -p myfolder4 
-rmdir myfolder7/myfolder8/myfolder9 Note: only delete myfoler9 
+rmdir myfolder7/myfolder8/myfolder9 Note: only delete myfolder9 
 rmdir -p myfolder7/myfolder8 Note: all delete myfolder7 and myfolder8 
 
 =>Copy Folder (recursive)
